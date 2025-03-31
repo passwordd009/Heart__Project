@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import photo from "../Photo/hello_kitty_birthday.png"
-import Timer from "./timer"
 gsap.registerPlugin(MotionPathPlugin);
 
 function HeartAnimation() {
@@ -61,10 +60,6 @@ function HeartAnimation() {
   }, []);
   return (
       <>
-    <div>
-      <Timer></Timer>
-    </div>
-
     <div ref={containerRef} style={containerStyle}>
       <img
       ref={heartRef} 

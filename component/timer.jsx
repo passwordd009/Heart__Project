@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import HeartAnimation from "./HeartAnimation";
 function Timer({ targetDate }) {
     const getNextMarch30 = () => {
         const today = new Date();
@@ -37,7 +38,10 @@ function Timer({ targetDate }) {
   return (
     <div style={{color: "white"}}>
       <center>
-        <h2 style={{fontSize: "45px"}}> Countdown to Next Birthday!</h2>
+        <h2 style={{fontSize: "45px"}}> Countdown to Birthday!</h2>
+        <div style={{marginBottom: "100px"}}>
+        <HeartAnimation></HeartAnimation>
+        </div>
         <p style={{fontSize: "30px"}}>
         {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
         </p>
