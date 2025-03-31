@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import photo from "../Photo/hello_kittygi_birthday.png"
+import photo from "../Photo/hello_kitty_birthday.png"
 import Timer from "./timer"
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -59,7 +59,6 @@ function HeartAnimation() {
     const intervalId = setInterval(spawnTrail, trailInterval * 1000);
     return () => clearInterval(intervalId);
   }, []);
-
   return (
       <>
     <div>
