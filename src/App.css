@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b30e8e;
+  font-family: 'Parisienne', cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.circle {
+  position: absolute;
+  background-color: pink;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.left {
+  opacity: 0; 
+}
+
+.right {
+  opacity: 0; /* Initially hidden */
+}
+
+.right.start {
+  opacity: 1;
+  animation: rightHeartDown 2s ease-in-out;
+  /* Add your animation for the right circle here */
+}
+
+.left.start {
+  opacity: 1;
+  animation: leftHeart 2s ease-in-out;
+}
+
+@keyframes leftHeart {
+  0% { transform: translate(0px, 80px); }
+  10% { transform: translate(-20px, 60px); }
+  20% { transform: translate(-40px, 40px); }
+  30% { transform: translate(-50px, 20px); }
+  40% { transform: translate(-45px, 0px); }
+  50% { transform: translate(-30px, -20px); }
+  60% { transform: translate(-10px, -40px); }
+  70% { transform: translate(10px, -40px); }
+  80% { transform: translate(30px, -20px); }
+  90% { transform: translate(45px, 0px); }
+  100% { transform: translate(50px, 20px); }
+}
+
+
+@keyframes rightHeartDown {
+  0% { transform: translate(50px, 20px); } /* Start where leftHeart ends */
+  10% { transform: translate(55px, 0px); }
+  20% { transform: translate(70px, -20px); }
+  30% { transform: translate(90px, -40px); }
+  40% { transform: translate(110px, -40px); }
+  50% { transform: translate(130px, -20px); }
+  60% { transform: translate(145px, 0px); }
+  70% { transform: translate(140px, 20px); }
+  80% { transform: translate(130px, 40px); }
+  90% { transform: translate(100px, 60px); }
+  100% { transform: translate(90px, 80px); } /* End where leftHeart begins */
+}
+
+
+
