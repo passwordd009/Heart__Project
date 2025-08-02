@@ -9,6 +9,7 @@ const Note = () => {
 
   return (
     <div style={styles.container} onClick={handleToggle}>
+        <h2 style={{fontSize: "45px", color:"white"}}> I love you!</h2>
       {!open ? (
         <img
           src="crumpled3.webp"
