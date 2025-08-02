@@ -1,10 +1,15 @@
 import { useState } from "react";
 
 const Note = () => {
-  const [open, setOpen] = useState(false);
-
+  const isOpen = JSON.parse(localStorage.getItem("isOpen") || "false");
+  const [open, setOpen] = useState(isOpen);
+  
   const handleToggle = () => {
-    setOpen((prev) => !prev);
+    setOpen((prev) => {
+        const newState = !prev;
+        localStorage.setItem("isOpen", JSON.stringify(newState));
+        return newState;
+      });
   };
 
   return (
