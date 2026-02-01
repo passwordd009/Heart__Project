@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import HeartAnimation from '../component/HeartAnimation'
 import Timer from '../component/timer'
 import Note from "../component/Note"
+import News_Modal from '../component/News_Modal'
 
 import './App.css'
 
@@ -11,8 +12,9 @@ function App() {
   
   return (
     <>
-     <Timer> </Timer>
+     <Timer></Timer>
      <Note></Note>
+     <News_Modal />
     </>
   )
 }
